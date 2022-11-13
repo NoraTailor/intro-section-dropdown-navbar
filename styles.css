@@ -1,0 +1,512 @@
+/*************\
+  reset meyer
+\*************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+* {
+	box-sizing: border-box;
+	font-family: 'Epilogue', sans-serif;
+	font-size: 1.5rem;
+}
+
+body {
+	width: 100%;
+}
+
+
+
+/*************\
+logo, and main picture, main part setup
+\*************/
+
+.main-picture {
+	background: url("./images/image-hero-mobile.png") no-repeat;
+	background-size: 100% ;
+	margin: auto;
+	width:  100%;
+	height: 60%;
+
+
+}
+
+
+.logo {
+	position: absolute;
+	top: 1.5rem;
+	left: 1.5rem;
+}
+
+
+main {
+	flex: 1;
+	margin-top: 3rem;
+	height: 80vh;
+	
+}
+
+
+
+
+/*************\
+navbar
+\*************/
+
+.navbar {
+	color: rgb(75, 75, 75);
+	width: 60%;
+	position: fixed;
+	top: -1rem;
+	right: 0;
+	background-color: white;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+	z-index: 1;
+	width: 40%;
+  margin-top: 4rem;
+}
+
+.navbar a {
+	color: rgb(75, 74, 74);
+	text-decoration: none;
+	margin-left: 1.4rem;
+	line-height: 1.8rem;
+	font-family: 'Epilogue', sans-serif;
+	white-space: nowrap;
+	margin-top: 1rem;
+	color: rgb(75, 74, 74);
+	display: block;
+}
+/* menu active plus icon change*/
+.menu-active {
+	opacity: 1;
+	transition: all 0.3s linear;
+}
+
+.menu-active-icon {
+	background: url('/images/icon-close-menu.svg') no-repeat;
+	width: 2rem;
+	height: 2rem;
+	
+}
+
+.fade-background{
+	opacity: 0.5;
+	
+}
+ 
+
+#open-navbar {
+	z-index: 3;
+	position: absolute;
+	top: 1.5rem;
+	right: 1rem;
+	cursor: pointer;
+	
+}
+
+.open-navbar-basic-bcg {
+	background: url('./images/icon-menu.svg') no-repeat;
+	width: 2rem;
+	height: 2rem;
+}
+
+
+.drop-down-icon {
+	text-decoration: none;
+	font-size: 16px;
+	color:rgb(75, 74, 74) ;
+	display: block;
+	border: none;
+	background: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+	margin-left: 1rem;
+	margin-top: 1rem;
+}
+
+header {
+	display: flex;
+	height: 1.4rem;
+}
+
+.navbar-btn {
+	margin: 1rem 1.5rem;
+	height: 2.5rem;
+	border-radius: 12px;
+	background-color: transparent;
+	border: none;
+	font-size: 16px;
+}
+
+.navbar-btn:hover {
+	border: 2px solid black;
+}
+
+.mini-nav-drop{
+	width: 150px;
+	height: 180px;
+	background-color: white;
+	color:rgb(75, 74, 74);
+	
+	display: flex;
+	flex-direction: column;
+	margin-top: -10px;
+	margin-left: 1.8rem;
+	transition: all 400ms ease-in-out;
+	display: none;
+}
+
+.mini-nav-active {
+	background-color: white;
+	
+}
+
+.drop {
+	background: url('/images/icon-arrow-down.svg') no-repeat;
+	width: 1rem;
+	height: 1rem;
+	position: relative;
+	top: -.85rem;
+	left: 5rem;
+}
+
+.drop-active{
+	background:  url('/images/icon-arrow-up.svg');
+	height: 1rem;
+	width: 1rem;
+}
+
+/*************\
+     main texts
+\*************/
+
+h1 {
+	font-size: 2.5rem;
+	margin: 1rem auto;
+	font-weight: bold;
+	
+}
+
+
+.main-text-below {
+	word-break: break-all;
+	
+	margin: auto;
+	color: rgb(75, 75, 75);
+	width: 70%;
+	font-size: 1.125rem;
+	line-height: 2rem;
+}
+
+
+.texts {
+	font-family: 'Epilogue', sans-serif;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+
+
+.learn-more {
+	width: 33%;
+	margin-top: 2.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: black;
+	color: white;
+	border-radius: 20px;
+	height: 3.5rem;
+	font-size: 1.125rem;
+	z-index: -1;
+	margin-bottom: 2rem;
+}
+
+
+
+/*************\
+    footer
+\*************/
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: 1rem;
+	width: 100%;
+	margin-top: 20px;
+	bottom: 10px;
+	position: absolute;
+}
+
+
+.nav-active-main-background-opacity {
+	opacity: 0.6;
+}
+
+
+@media screen and (min-width:900px) {
+
+	body {
+		min-width: 900px;
+	}
+
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		height: 1rem;
+		font-size: 20px;
+		color: rgb(75, 75, 75);
+		position: relative;
+		margin-top: 1.2rem;
+		background-color: white;
+		left: 8rem;
+		opacity: 1;
+	}
+
+	a {
+		display: flex;
+		flex-direction: row;
+		
+		margin-left: 1rem;
+		position: relative;
+		font-size: 20px;
+	}
+
+	#open-navbar {
+		display: none;
+	}
+
+
+	.main-picture {
+		background: url("./images/image-hero-desktop.png") no-repeat;
+		background-size: 100%;
+		order: 1;
+		width: 30%;
+		height: 700px;
+		position: relative;
+		margin: auto 10rem auto 3.5rem;
+		
+	}
+
+	main {
+		display: flex;
+		align-items: flex-start;
+
+	}
+
+	h1,
+	.main-text-below {
+		width: 600px;
+		/*margin-right: 18rem;*/
+		text-align: left;
+	}
+
+	h1 {
+		margin-top: 10rem;
+		font-size: 6rem;
+	}
+
+	.learn-more {
+		position: relative;
+		left: 7rem;
+		margin-top: 2rem;
+	}
+
+	.texts {
+		flex: 1;
+		margin-left: 7rem;
+		width: 600px;
+
+	}
+
+
+	.logo {
+		position: absolute;
+		top: 2.5rem;
+		left: 1.5rem;
+		}
+
+	.drop-down-icon {
+		font-size: 18px;
+	}
+
+	.navbar-btn {
+		margin-right: .7rem;
+		height: 3rem;
+		border-radius: 12px;
+		padding: 1rem;
+		border: none;
+		color: gray;
+		width: 8rem;
+		
+		font-size: 20px;
+		position: relative;
+		left: 50vw;
+	}
+
+	.mini-nav-drop {
+	 width: 150px;
+		height: 180px;
+		background-color: white;
+		color: rgb(75, 74, 74);
+	  top: 3rem;
+		left: inherit;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		margin-left: 1.8rem;
+		transition: all 400ms ease-in-out;
+		display: none;
+	}
+
+	.navbar-btn:hover {
+		border: 2px solid black;
+		
+	}
+
+	footer {
+		position: relative;
+		left: 11rem;
+		bottom: 1rem;
+		width: 700px;
+		
+	}
+}
